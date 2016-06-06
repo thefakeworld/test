@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html5+css3实现春节贺卡</title>
+	<meta charsert="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style type="text/css">
+
+
+
+	*{ margin: 0; padding:0;border:none;font-size:1-5625vw;}
+	html,body{height: 100%;width: 100%;}
+	#music{position: fixed;top: 3vh;right: 4vw;z-index: 5;width: 15vw;height: 15vw;border: 4px solid red;}
+	#music >img:first-of-type{position: absolute;top:24%;right: 2.5%;width: 28.421%;z-index: 1;}
+	#music>img:last-of-type{position: absolute;top:0;right:0;bottom:0;left: 0;margin: auto;width: 79%;z-index: 0;}
+	/*动态效果*/
+	#music>img.play{animation:music;}
+
+
+	/* page1鑳屾櫙	 */
+	#page1{display: none}
+	.page{height:100%;width:100%;position: absolute;}
+	.page>.bg{position: absolute;z-index: -1;width: 100%;height: 100%;}
+	#page1>.bg{background: url("image/p1_bg.jpg") no-repeat center center;background-size: 100%;}
+  	#page1>.p1_lantern{position: absolute;top: -3.4%;right: 0;left: 0;margin: auto;width: 45vw;height: 71.2vh;background:url("image/p1_lantern.png") no-repeat center bottom; background-size: contain;box-sizing:border-box;padding-top: 33vh;text-align: center;}
+  	#page1>.p1_lantern:before{
+  		content: "";
+  		position: absolute;
+  		top: 0;
+  		right: 0;
+  		bottom: 0;
+  		left: 0;
+  		margin: auto;
+  		width: 30vw;
+  		height: 30vw;
+  		background: pink;
+  		border-radius: 50%;
+  		opacity: 0.5;
+  		box-shadow: 0 0 10vw 10vw pink;
+  		webkit-box-shadow: 0 0 10vw 10vw pink;
+  		moz-box-shadow: 0 0 10vw 10vw pink;
+  		-webkit-animation:p1_lantern 0.5s infinite alternate;
+  				animation:p1_lantern 0.5s infinite alternate;
+
+  	}
+  	-webkit-@keyframe p1_lantern{
+  		0%{ opacity: 0.5;
+  			-webkit-transform: scale(0.8,0.8);
+					transform: scale(0.8,0.8);
+  		}
+  		100%{ opacity: 1;}
+  	}
+  		#page1>.p1_imoooc{
+  			position: absolute;
+  			right: 0;
+  			bottom: 9vh;
+  			left: 0;
+  			background-image: url("image/p1_imooc.png");
+  			background-repeat:no-repeat;
+  			background-size: contain;
+  			width: 28vw;
+  			height: 18vh;
+  			margin: auto;
+  		}
+  		#page1>.p1_words{font-size: 2.132em;
+  			position: absolute;
+  			right: 0;
+  			bottom: 48px;
+  			left: 0;
+  			text-align: center;
+  			color: gray;
+  		}
+
+	/* page2鑳屾櫙	 */
+	#page2{display: none;}	
+	#page2>.bg{background: url("image/p2_bg.jpg") no-repeat center center;background-size: 100%;width: 100%;height: 100%;}
+
+	#page2>.p2_circle{position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;border-radius: 50%;
+		background:url("image/p2_circle_outer.png") no-repeat center center;width: 58vw;height: 58vw;background-size: contain;
+	}
+	#page2>.p2_circle:before{position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;border-radius: 50%;
+		content: "";
+		background:url("image/p2_circle_middle.png") no-repeat center center;width: 45vw;height: 45vw;background-size: contain;
+	}
+	#page2>.p2_circle:after{position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;border-radius: 50%;
+		content: "";
+		background:url("image/p2_circle_inner.png") no-repeat center center;width: 30vw;height: 30vw;background-size: contain;
+		-webkit-animation:p2_circle_inner;
+		animation:p2_circle_inner;
+	}
+@-webkit-keyframes p2_ciecle_inner{
+	0%{
+		-webkit-transform:rotate(0deg);
+	}
+
+}
+/*圆圈转的动画-未完成*/
+	#page2>.p2_2016{position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;background:url("image/p2_2016.png") no-repeat center center;width: 27vw;height: 6vh;    background-size: contain;
+	}
+
+
+
+	/* page3鑳屾櫙	 */
+	#page3{display: block;}	
+	#page3>.bg{background: url("image/p3_bg.jpg") no-repeat center center;background-size: 100%;}
+	#page3>.p3_logo{
+		width: 34vw;
+		height: 6vh;
+		position: absolute;
+		top: 8vh;
+		right: 0;
+		left: 0;
+		background:url(image/p3_logo.png)no-repeat center center;background-size: contain;
+	}
+	#page3>.p3_title{
+		width: 34vw;
+		height: 40vh;
+		position: absolute;
+		top: 28vh;
+		right: 0;
+		left: 0;
+		margin: auto;
+		background:url(image/p3_title.png)no-repeat center center;background-size: contain;
+	}
+	#page3>.p3_first{
+		width: 34vw;
+		height: 46vh;
+		position: absolute;
+		top: 28vh;
+		left: 4vw;
+		background:url(image/p3_couplet_first.png)no-repeat center center;background-size: contain;
+	}
+	#page3>.p3_second{
+		width: 34vw;
+		height: 46vh;
+		position: absolute;
+		top: 28vh;
+		right: 4vw;
+		background:url(image/p3_couplet_second.png)no-repeat center center;background-size: contain;
+	}
+
+	#page3>.p3_blessing{
+		width: 34vw;
+		height: 36vh;
+		position: absolute;
+		bottom: 2vh;
+		right: 0;
+		left: 0;
+		margin: auto;
+		border-radius: 50%;
+		background:url(image/p3_blessing.png)no-repeat center center;background-size: contain;
+	}
+
+
+	</style>
+</head>
+<body>
+<div id="music">
+	<img src="image/music_pointer.png">
+	<img src="image/music_disc.png">
+</div>
+<!-- 第一页 -->
+<div class="page" id="page1">
+	<div class="bg"></div>
+	<div class="p1_lantern">点击屏幕<br>开启好运2016</div>
+	<div class="p1_imoooc"></div>
+	<div class="p1_words">2016新年特献</div>
+</div>
+<!-- 第二页 -->
+<div class="page" id="page2">
+	<div class="bg"></div>
+	<div class="p2_circle"></div>
+	<div class="p2_2016"></div>
+</div>
+<!-- 第三页 -->
+<div class="page" id="page3">
+	<div class="bg"></div>
+	<div class="p3_logo"></div>
+	<div class="p3_title"></div>
+	<div class="p3_first"></div>
+	<div class="p3_second"></div>	
+	<div class="p3_blessing"></div>
+</div>
+
+
+<!-- 播放音乐部分 交互行为点击-->
+<script type="text/javascript">
+window.onload=function () {
+	var music=document.getElementById('music');
+	var audio=document.getElementsByTagName('audio'[0];)
+
+	music.onclick=function () {
+		if (audio.paused) {
+			audio.play();
+			// this.setAttribute("class","play");
+			// this.style.animationPlayState="running";
+			// this.style.webkitAnimationPlayState="running";
+		} else{
+			audio.pause();
+			this.setAttribute("class","")
+			// this.style.animationPlayState="paused";
+		};
+	}
+
+	<!-- 音乐停止时光盘不旋转 -->
+	audio.addEventListener("ended",function(event){
+		music.setAttribute("class","")
+	},false);
+
+	// 添加监听事件 程序不完整
+	music.addEventListener("touchstart",function(event){
+		if (audio.paused) {
+			audio.play();
+			this.setAttribute("class","play");
+		}else{
+			audio.pause();
+			this.setAttribute("class","")
+		};
+	},false);
+
+}	
+</script>
+</body>
+</html>
+<!-- http://www.imooc.com/video/11044/0 -->
+<!-- http://www.imooc.com/video/11049 -->
