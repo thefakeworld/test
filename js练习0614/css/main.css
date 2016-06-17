@@ -1,0 +1,165 @@
+/*clearfix*/
+
+.clearfix {
+
+    *zoom: 1;
+
+}
+
+.clearfix:before,
+
+.clearfix:after {
+
+    display: table;
+
+    line-height: 0;
+
+    content: "";
+
+}
+
+.clearfix:after {
+
+    clear: both;
+
+}
+.clear{
+    clear:both;
+}
+
+
+html,body{height: 100%;min-width: 1300px;}
+ul{ list-style:none;}
+
+
+.header{
+    width: 1000px;
+    margin: 0 auto;
+}
+.header .header-logo{
+    float: left;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+.header .header-number{
+    text-align: right;
+    float: right;
+    padding-right: 100px;
+}
+.header .header-number h3{
+
+    font-weight: bold;
+    color:gray;
+    margin-bottom: 0;
+}
+.header .header-number p{
+
+    font-size: 21px;
+    font-weight: bold;
+    color:blue;
+    margin-top: 0;
+}
+
+.middle{
+    width: 100%;
+    height: 512px;
+    /*background-color: red;*/
+    position: relative;
+}
+
+
+/*中间banner部分*/
+
+.banner{width: 100%; height:512px;  margin:0 auto; position:relative;overflow: hidden;}
+.banner ul{width: 100%;height: 512px;}
+.banner .img li{width: 100%;height: 512px; position:absolute; top:0;left:0; display:none;}
+
+.banner .img img{width: 100%;}
+
+.banner .img .li-1{background: url(../image/bg1.jpg) no-repeat center;}
+.banner .img .li-2{background: url(../image/bg2.jpg) no-repeat center;}
+.banner .img .li-3{background: url(../image/bg3.jpg) no-repeat center;}
+.banner .img .li-4{background: url(../image/bg4.jpg) no-repeat center;}
+/*	.banner.imgOn{display: block;}*/
+
+.banner .num{ position:absolute; width:100%; top: 479px; left:0; text-align:center; font-size:0px;}
+.banner .num li{ width:10px;height:10px; border-radius:50%; display:inline-block; margin:0 3px; cursor:pointer;border: 1px white solid;}
+/*	.banner>.num li.on{ background:#F60;}	*/
+
+.banner .num .active{background: white;color: white;}
+
+.banner .btn{ position:absolute; top:50%; margin-top:-30px;width:30px; height:60px; background:rgba(0,0,0,0.5); color:#fff; text-align:center; line-height:60px; font-size:40px; display:none; cursor:pointer;}
+.banner:hover .btn{ display:block;}
+.banner .left{ left:0}
+.banner .right{ right:0;}
+/*中间注册部分*/
+#register{
+    width: 426px;height: 453px;background-color: red;position: absolute;z-index: 5;top: -15px;
+    right: 100px;background: url(../image/zhuce-bg.png) no-repeat center;
+    padding: 50px;
+    font-family: 宋体;
+    font-size: 16px;
+    padding-top: 70px;
+    padding-left: 65px;
+    padding-right: 50px;
+    text-align: center;
+    color: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+#register form div {
+    margin: 10px;
+}
+#register form .div1 {
+    background: url(../image/name-icon.png) no-repeat center;
+}
+#register form .div2 {
+    background: url(../image/tel-icon.png) no-repeat center;
+}
+#register form .yzm {
+    background: url(../image/yzm-icon.png) no-repeat center;
+    padding-right: 30px;
+}
+#register .yzm input{
+    width: 66px;
+    padding-right: 20px;
+
+}
+#register .yzm img{
+    width: 101px;
+    height: 36px;
+    margin: -14px;
+}
+#register form .submit-div {
+    background: url(../image/zhuce-bt.png) no-repeat center;
+}
+#register form input{
+    border-radius: 4px;
+    height: 54px;border: none;
+    background-color: transparent;
+    outline: medium;
+}
+#register form .submit{
+    width: 100%;
+    color: #ffffff;
+}
+
+#register form label{
+    width: 100px;
+    display: inline-block;
+    text-indent: -9999px;
+}
+#register form .check-box{
+    height: 12px;
+}
+
+
+
+
+.footer{
+    height: 70px;
+}

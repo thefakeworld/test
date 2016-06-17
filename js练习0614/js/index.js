@@ -81,7 +81,7 @@ $(function(){
 // 表单提交代码
 $(document).ready(function(){
 
-        $("#submit").click(function (){
+        $(".submit").click(function (){
             $.get("http://localhost:8000/login",
                 {
                     username:"admin",
