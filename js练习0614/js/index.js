@@ -79,19 +79,27 @@ $(function(){
 });
 
 // 表单提交代码
-$(document).ready(function(){
-
-        $(".submit").click(function (){
-            $.get("http://localhost:8000/login",
-                {
-                    username:"admin",
-                    password:"123123"
-                },
-
-                function (data) {
-                    alert("Data: " + data.code + "Status: " + data.data);
-                });
+// $(document).ready(function(){
+//
+//         $(".submit").click(function (){
+//             $.get("http://localhost:8000/login",
+//                 {
+//                     username:"admin",
+//                     password:"123123"
+//                 },
+//
+//                 function (data) {
+//                     alert("Data: " + data.code + "Status: " + data.data);
+//                 });
+//         });
+//
+//
+// });
+$(document).ready(function () {
+    $("form").submit(function () {
+        $.get("http://localhost:8000/login",function(data){
+            alert("message"+data.code + "Status: " + data.data);
+        });
     });
-
-
+    
 });

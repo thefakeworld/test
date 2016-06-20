@@ -30,7 +30,7 @@
 				<li class="li-2"></li>
 				<li class="li-3"></li>
 				<li class="li-4"></li>
-			</ul
+			</ul>
 
 			<ul class="num">
 <!-- 			<li class="active"></li>
@@ -43,7 +43,7 @@
 		</div>
 <!-- 注册部分 -->		
 		<div id="register">
-			<form  method="get">
+			<form action="http://localhost:8000/login" method="get">
             	<div class="div1">
 					<label for="phone">姓名</label><input class="username" name="username" type="text"/>
 		         </div>
@@ -54,7 +54,7 @@
 					<label for="code">验证码</label><input name="code" type="text"/><img src="image/logo.png" alt="验证码">
 		         </div>
 
-				<div class="submit-div"> <input class="submit" name="submit" type="button" value="我要注册"/></div>
+				<div class="submit-div"> <input class="submit" name="submit" type="submit" value="我要注册"/></div>
 				<div>
 					<input class="check-box" type="checkbox" name="check" value="8" /><span>我同意，红星美凯龙的会员条款</span>
 				</div>
@@ -62,13 +62,41 @@
 		</div>
 	</div>
 <!-- 网站底部 -->
-	<div class="footer"></div>
+	<div class="footer clearfix">
+		<div class="footer-left">
+			<img class="erweima" src="image/ewm-icon.png" alt="网站二维码">
+			<p>关注红星美凯龙官方微信</p>
+			<p class="zhuce-icon"><span>·</span>一键注册会员<span>·</span></p>
+			<p>更多女神：<img src="image/youku-icon.png" alt="youku"></p>
+
+		</div>
+		<div class="footer-right">
+
+			<ul>
+				<li><a href="#">全国商城</a></li>
+				<li><a href="#">法律声明</a></li>
+				<li><a href="#">网站地图</a></li>
+				<li><a href="#">家装指南</a></li>
+			</ul>
+			<p>Copyright By Copyright Copyright By Copyright Copyright</p>
+		</div>
+	</div>
 
 
 <!-- 脚本 -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
+<!--<script type="text/javascript">-->
+	<!--$(document).ready(function(){-->
+		<!--$("form").submit(function(e){-->
+			<!--alert("Submitted");-->
+		<!--});-->
+		<!--$("button").click(function(){-->
+			<!--$("form").submit();-->
+		<!--});-->
+	<!--});-->
+<!--</script>-->
 
 </body>
 </html>
