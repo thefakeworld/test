@@ -1,0 +1,52 @@
+let frameCount = 0;
+let startTime = performance.now();
+
+function idleCallback() {
+  frameCount++;
+  console.log(frameCount)
+  if (frameCount % 60 === 0) {
+    const currentTime = performance.now();
+    const elapsedSeconds = (currentTime - startTime) / 1000;
+    const framesPerSecond = frameCount / elapsedSeconds;
+
+    console.log(`RequestIdleCallback is called ${framesPerSecond.toFixed(2)} times per second.`);
+    
+    frameCount = 0;
+    startTime = currentTime;
+  }
+  if(frameCount < 100) {
+    requestIdleCallback(idleCallback);
+  }
+}
+
+requestIdleCallback(idleCallback);
+
+
+function renderWithFiber(times) {
+    let count = 1
+    let startTime = performance.now();
+   
+    console.log(new Date());
+
+  const run = (deadline) => {
+      count ++;
+      console.log(deadline.timeRemaining(), count);
+    while ((deadline.timeRemaining() > 0 || deadline.didTimeout)) {
+        
+      let a = 1
+        a ++
+        if(a>10000){
+            break;
+        }
+       
+    }
+    if (count < times) {
+      requestIdleCallback(run);
+    }else{
+        console.log(performance.now() - startTime);
+        console.log(new Date());
+    }
+  };
+  requestIdleCallback(run);
+}
+renderWithFiber(100);
