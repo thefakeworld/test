@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .outside-box{
+            /* width: 200px; */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* flex-grow: 10; */
+            background-color: #eee;
+        }
+        .top-box{
+            height: 100px;
+            background-color: #ddd;
+        }
+        .bottom-box{
+            flex-grow: 1;
+            background-color: #ccc;
+        }
+        .box3{
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+  <div class="out1">
+   
+    <div class="outside-box">
+        <div class="top-box">这里是一个固定高度的组件, height: 100px;</div>
+        <div class="bottom-box">这是不定高度的组件</div>
+        <div class="wrap">
+          <div class="out-left">
+            <div class="content">
+              <ul>
+                <li>导航1111</li>
+                <li>导航1</li>
+                <li>导航1</li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrap2">
+            
+            <div class="card">
+              <div class="bread-crumb">
+                面包屑/测试/地点
+              </div>
+              
+              <div class="card-content">
+                <h3>写业务的地方</h3>
+                <div class="card-title">
+                  <button class="1">这是卡片</button>  
+                  <button class="1">这是卡片</button>  
+                </div>
+
+                <div class="form-wrap">
+                  <h4>登记表单</h4>
+                  <div>
+                    <input type="text">
+                  </div>
+                  <div>
+                    <input type="text">
+                  </div>
+                  <div class="desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsam. Alias assumenda voluptate quas distinctio praesentium quos? Repellendus, excepturi itaque adipisci, praesentium tempora voluptas accusamus vero in autem quis magnam.
+                    Doloremque maiores optio, laborum provident neque rerum repellat dignissimos similique adipisci odit nesciunt dolor! Corrupti voluptates fuga suscipit, impedit nesciunt animi quos consequatur expedita iusto perferendis vero quis. Optio, nobis.
+                    Eum doloremque repudiandae sint amet ipsa, neque dolorem enim aliquam expedita voluptates, voluptatibus necessitatibus dolore porro rem vitae! Libero magni reiciendis facere cum a recusandae earum magnam dolores iste dolorem?
+                    Sed saepe ab, asperiores voluptatibus deleniti dolores possimus fuga? Tempore libero alias, eum nam repudiandae maiores hic ratione atque sunt suscipit cum doloremque rem velit quisquam adipisci aut fuga inventore?
+                    Repellendus consequatur ipsa est nobis mollitia commodi officia ratione minus unde qui voluptatibus laudantium fuga dolore tenetur ea vitae facere, maiores, corrupti molestiae laborum! Sunt quis beatae ipsam ab autem!
+                  </div>
+                </div>
+                <div class="footer">
+                  <button class="1">提交</button>  
+                </div>
+              </div>
+              <div class="footer">
+                这是portal在业务组件外 <button class="1">提交</button>  
+                <button class="1">返回</button>  
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="box3">这是第三个组件</div>
+    </div>
+  </div>
+    <style>
+      .wrap {
+        height: 100%;
+        background-color: rosybrown;
+        overflow: auto;
+
+        .wrap2 {
+          height: 100%;
+        }
+        .out-left {
+          float: left;
+          width: 120px;
+          height: 100%;
+          overflow-y: auto;
+        }
+
+        .bread-crumb {
+          background-color: aqua;
+        }
+
+        .card {
+          height: 100%;
+          background-color: #FFF;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid green;
+          box-sizing: border-box;
+          .card-content {
+            margin: 16px;
+            height: 100%;
+            background-color: antiquewhite;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+          }
+          .form-wrap {
+            height: 100%;
+            overflow: auto;
+            background-color: #eee;
+          }
+        }
+      }
+    </style>
+</body>
+</html>
